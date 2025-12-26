@@ -15,7 +15,7 @@ const Hero = () => {
             🎓 Learn AutoCAD Professionally
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight text-foreground">
+          <h1 className="text-5xl md:text-5xl font-bold leading-tight text-foreground">
             Become an <span className="text-primary">AutoCAD Expert</span> with Practical Training
           </h1>
 

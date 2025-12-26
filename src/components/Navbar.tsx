@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink, Link } from "react-router-dom";
 import logo from "@/assets/logo-01.png";
 
 
@@ -23,16 +24,48 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-foreground/80 font-medium">
-          <li className="hover:text-primary cursor-pointer transition-colors">Home</li>
-          <li className="hover:text-primary cursor-pointer transition-colors">Courses</li>
-          <li className="hover:text-primary cursor-pointer transition-colors">Gallery</li>
-          <li className="hover:text-primary cursor-pointer transition-colors">About</li>
-          <li className="hover:text-primary cursor-pointer transition-colors">Contact</li>
+          <li>
+            <NavLink to="/" className={({ isActive }) =>
+              `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+            }>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/courses" className={({ isActive }) =>
+              `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+            }>
+              Courses
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/gallery" className={({ isActive }) =>
+              `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+            }>
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) =>
+              `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+            }>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) =>
+              `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+            }>
+              Contact
+            </NavLink>
+          </li>
         </ul>
 
-        <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm">
-          Get Started
-        </button>
+        <Link to="/contact" className="hidden md:inline-block">
+          <button className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm">
+            Get Started
+          </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button 
@@ -47,15 +80,47 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <ul className="flex flex-col gap-4 p-6 text-foreground/80 font-medium">
-            <li className="hover:text-primary cursor-pointer transition-colors">Home</li>
-            <li className="hover:text-primary cursor-pointer transition-colors">Courses</li>
-            <li className="hover:text-primary cursor-pointer transition-colors">Gallery</li>
-            <li className="hover:text-primary cursor-pointer transition-colors">About</li>
-            <li className="hover:text-primary cursor-pointer transition-colors">Contact</li>
             <li>
-              <button className="w-full bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors">
-                Get Started
-              </button>
+              <NavLink to="/" className={({ isActive }) =>
+                `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+              } onClick={() => setIsOpen(false)}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/courses" className={({ isActive }) =>
+                `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+              } onClick={() => setIsOpen(false)}>
+                Courses
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/gallery" className={({ isActive }) =>
+                `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+              } onClick={() => setIsOpen(false)}>
+                Gallery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className={({ isActive }) =>
+                `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+              } onClick={() => setIsOpen(false)}>
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={({ isActive }) =>
+                `${isActive ? "text-primary" : "hover:text-primary"} cursor-pointer transition-colors`
+              } onClick={() => setIsOpen(false)}>
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <button className="w-full bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                  Get Started
+                </button>
+              </Link>
             </li>
           </ul>
         </div>

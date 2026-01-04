@@ -7,4 +7,5 @@ const About: React.FC = () => (
   </main>
 );
 
+// commented
 export default About;

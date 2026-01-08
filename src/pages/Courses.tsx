@@ -88,7 +88,7 @@ const Courses: React.FC = () => {
             <span className="inline-block bg-primary/10 text-primary px-5 py-2 rounded-full text-sm font-medium tracking-wide mb-6">
               OUR BEST COURSE
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="text-5xl md:text-5xl font-bold leading-tight text-foreground">
               Discover a most popular Online Course
             </h1>
           </div>

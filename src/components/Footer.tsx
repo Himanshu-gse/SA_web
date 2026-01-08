@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import logo from "@/assets/logo-w-01.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+              {/* <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
                 SA
-              </div>
+              </div> */}
+               <img 
+              src={logo} 
+              alt="AutoCAD Training Center" 
+              className="w-12 h-12 items-center justify-center"
+            />
               <span className="font-bold text-lg">Shiva AutoCAD</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
